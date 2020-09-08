@@ -22,4 +22,7 @@ func main() {
 	switchEx()
 
 	deferPrint()
+
+	pointersExample1()
+	pointersStructExample()
 }

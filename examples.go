@@ -95,3 +95,32 @@ func deferPrint() {
 
 	fmt.Print("This suit is black........")
 }
+
+func pointersExample1() {
+
+	i, j := 22, 2020
+
+	p := &i
+
+	fmt.Println("Value of p", p)
+	fmt.Println("Value of i through pointer p", *p)
+	*p = 25
+	fmt.Println("Value of i", i)
+
+	p = &j
+	*p = *p / 200
+	fmt.Println("Value of j divided by 200", j)
+}
+
+func pointersStructExample() {
+
+	bmw := Car{"bmw", "m5", "e39", 30000}
+
+	fmt.Println("Car price", bmw.price)
+
+	p := &bmw
+	p.price = 32000
+
+	fmt.Println("Value of p", p)
+	fmt.Println("Car price change via pointer p", bmw.price)
+}
