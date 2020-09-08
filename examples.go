@@ -35,11 +35,6 @@ func bitwiseShiftLeft() {
 	fmt.Println("shiftedVal", shiftedVal)
 }
 
-// Simple function that returns an int type
-func add(x int, y int) int {
-	return x + y
-}
-
 // Return function with multiple (2) values
 func helloMultipleVals() (string, string) {
 	return "Hello", "Sir"
@@ -124,3 +119,36 @@ func pointersStructExample() {
 	fmt.Println("Value of p", p)
 	fmt.Println("Car price change via pointer p", bmw.price)
 }
+
+func pointersStructLiteralExample() {
+
+	v1 := Car{"bmw", "m5", "e39", 30000}
+	v2 := Car{brand: "bmw", model: "m5", trim: "e39"}
+
+	fmt.Println("Cars (Literal): ", v1, v2)
+}
+
+func sliceArray(numbers []int) {
+
+	fmt.Println("Slice - Input array: ", numbers)
+
+	if len(numbers) > 6 {
+
+		fmt.Println("Sliced array: ", numbers[1:6])
+	}
+
+	fmt.Println("Make'd a slice array of 5 length: ", make([]int, 5))
+}
+
+func dynamicSlice(numbers []int) {
+
+	fmt.Println("Dynamic Slice - Input array: ", numbers)
+
+	if len(numbers) > 6 {
+
+		printArrayDetails("Sliced to zero length:", numbers[:0])
+		printArrayDetails("Sliced to zero length:", numbers[:4])
+		printArrayDetails("Sliced to zero length:", numbers[2:])
+	}
+}
+

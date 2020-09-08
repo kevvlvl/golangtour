@@ -24,5 +24,13 @@ func main() {
 	deferPrint()
 
 	pointersExample1()
+
 	pointersStructExample()
+	pointersStructLiteralExample()
+
+	primes := []int { 3, 5, 7, 11, 13, 17,  19, 23, 29, 31}
+	sliceArray(primes)
+	dynamicSlice(primes)
+
+
 }
