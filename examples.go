@@ -152,3 +152,25 @@ func dynamicSlice(numbers []int) {
 	}
 }
 
+func sliceAppend() {
+	var s []int
+	printArrayDetails("Details", s)
+
+	s = append(s, 0, 1, 3)
+	printArrayDetails("Details after append", s)
+
+	s = append(s, 8, 9)
+	printArrayDetails("Details after 2nd append", s)
+}
+
+func mapExample() {
+
+	var m map[string]Vertex
+
+	m = make(map[string]Vertex)
+	m["kevvlvl-ex"] = Vertex {
+		100, 999,
+	}
+
+	fmt.Println("Map Details: ", m)
+}

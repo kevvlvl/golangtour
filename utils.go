@@ -11,3 +11,12 @@ func add(x int, y int) int {
 func printArrayDetails(message string, numbers[] int) {
 	fmt.Println(message, "Length: ", len(numbers), " - Capacity: ", cap(numbers), " Contents: ", numbers)
 }
+
+// iterate a slice and show its contents
+func iterateSlice(numbers[] int) {
+
+	// to omit i or v in the for loop, replace variable by underscore _
+	for i, v := range numbers {
+		fmt.Println("Current index: ", i, ", value: ", v)
+	}
+}
